@@ -1,4 +1,4 @@
-```ruby
+<pre style="color:#00BFFF;">
 ██████╗ ███╗   ██╗███████╗██╗      ██████╗  ██████╗ ██╗  ██╗██╗   ██╗██████╗
 ██╔══██╗████╗  ██║██╔════╝██║     ██╔═══██╗██╔═══██╗██║ ██╔╝██║   ██║██╔══██╗
 ██║  ██║██╔██╗ ██║███████╗██║     ██║   ██║██║   ██║█████╔╝ ██║   ██║██████╔╝
@@ -217,4 +217,4 @@ Licensed under **AGPL v3.0**
 
 # Author
 
-Built for cybersecurity learning and professional DNS reconnaissance workflows.
+Jagadeesh Pagoti
