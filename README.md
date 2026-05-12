@@ -7,61 +7,234 @@
 ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝
 ```
 
-[![Cybersecurity Projects](https://img.shields.io/badge/Cybersecurity--Projects-Project%20%234-red?style=flat&logo=github)](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/dns-lookup)
-[![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org)
+# DNSLookup Professional CLI
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org)
 [![License: AGPLv3](https://img.shields.io/badge/License-AGPL_v3-purple.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![PyPI](https://img.shields.io/pypi/v/dnslookup-cli?color=3775A9&logo=pypi&logoColor=white)](https://pypi.org/project/dnslookup-cli/)
 
-> Professional DNS query CLI with Rich terminal output, reverse lookups, and WHOIS integration.
+> Professional command-line DNS reconnaissance and lookup utility with rich terminal output, reverse DNS resolution, WHOIS integration, DNS tracing, and batch processing.
 
-*This is a quick overview — security theory, architecture, and full walkthroughs are in the [learn modules](#learn).*
+---
 
-**[Screenshots & demo →](DEMO.md)**
+## Overview
 
-## What It Does
+DNSLookup Professional is a modern CLI-based DNS intelligence and reconnaissance tool built for developers, cybersecurity learners, penetration testers, and system administrators.
 
-- Query A, AAAA, MX, NS, TXT, CNAME, and SOA records with colored table output
-- Reverse DNS lookup to resolve IP addresses back to hostnames
-- Trace DNS resolution path from root servers to authoritative nameservers
-- Batch lookups with concurrent queries for processing domain lists
-- WHOIS integration for domain registration information
-- JSON export for scripting and pipeline integration
+It provides fast, structured, and visually clean DNS query results directly in the terminal while supporting multiple DNS operations commonly used in network analysis and security investigations.
 
-## Quick Start
+---
+
+## Features
+
+- Professional rich terminal UI
+- Query DNS records:
+  - A
+  - AAAA
+  - MX
+  - NS
+  - TXT
+  - CNAME
+  - SOA
+- Reverse DNS lookup
+- WHOIS domain intelligence lookup
+- DNS resolution path tracing
+- Batch domain lookup processing
+- JSON output support
+- Fast concurrent processing
+- Clean professional CLI output
+
+---
+
+# Installation
+
+## Method 1 — Install from PyPI (Recommended)
+
+Install directly using pip:
+
+```bash
+pip install dnslookup-cli
+```
+
+Or using uv:
 
 ```bash
 uv tool install dnslookup-cli
-dnslookup query example.com
 ```
 
-> [!TIP]
-> This project uses [`just`](https://github.com/casey/just) as a command runner. Type `just` to see all available commands.
->
-> Install: `curl -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin`
+Verify installation:
 
-## Commands
+```bash
+dnslookup --help
+```
+
+---
+
+## Method 2 — Install from Source Code
+
+Clone repository:
+
+```bash
+git clone https://github.com/yourusername/dns-lookup-professional-ui.git
+```
+
+Move into project directory:
+
+```bash
+cd dns-lookup-professional-ui
+```
+
+Create virtual environment:
+
+### Linux / Kali
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Or:
+
+```bash
+pip install .
+```
+
+---
+
+# Quick Start
+
+Basic DNS query:
+
+```bash
+dnslookup query google.com
+```
+
+Reverse lookup:
+
+```bash
+dnslookup reverse 8.8.8.8
+```
+
+WHOIS lookup:
+
+```bash
+dnslookup whois tesla.com
+```
+
+Trace DNS resolution:
+
+```bash
+dnslookup trace github.com
+```
+
+Batch lookup:
+
+```bash
+dnslookup batch domains.txt
+```
+
+JSON output:
+
+```bash
+dnslookup query google.com --json
+```
+
+---
+
+# Command Reference
 
 | Command | Description |
-|---------|-------------|
-| `dnslookup query` | Query DNS records for a domain with colored table output |
-| `dnslookup reverse` | Resolve an IP address back to its hostname |
-| `dnslookup trace` | Trace the DNS resolution path from root to authoritative servers |
-| `dnslookup batch` | Query multiple domains concurrently from a file |
-| `dnslookup whois` | Retrieve WHOIS registration information for a domain |
+|--------|-------------|
+| `dnslookup query <domain>` | Query DNS records |
+| `dnslookup reverse <ip>` | Reverse DNS lookup |
+| `dnslookup whois <domain>` | Domain WHOIS lookup |
+| `dnslookup trace <domain>` | Trace DNS resolution |
+| `dnslookup batch <file>` | Batch lookup multiple domains |
+| `dnslookup --help` | Show help |
 
-## Learn
+---
 
-This project includes step-by-step learning materials covering security theory, architecture, and implementation.
+# Example Output
 
-| Module | Topic |
-|--------|-------|
-| [00 - Overview](learn/00-OVERVIEW.md) | Prerequisites and quick start |
-| [01 - Concepts](learn/01-CONCEPTS.md) | Security theory and real-world breaches |
-| [02 - Architecture](learn/02-ARCHITECTURE.md) | System design and data flow |
-| [03 - Implementation](learn/03-IMPLEMENTATION.md) | Code walkthrough |
-| [04 - Challenges](learn/04-CHALLENGES.md) | Extension ideas and exercises |
+### DNS Query
 
+```bash
+dnslookup query tesla.com
+```
 
-## License
+Returns:
 
-AGPL 3.0
+- A records
+- MX records
+- NS records
+- SOA records
+- TTL information
+- Response timing
+
+---
+
+# Use Cases
+
+This tool is useful for:
+
+- Cybersecurity reconnaissance
+- DNS enumeration
+- Threat intelligence investigations
+- Infrastructure diagnostics
+- Network troubleshooting
+- Domain intelligence gathering
+- Security learning labs
+
+---
+
+# Project Structure
+
+```bash
+dns-lookup-professional-ui/
+│
+├── dnslookup/
+├── tests/
+├── learn/
+├── DEMO.md
+├── README.md
+├── pyproject.toml
+└── requirements.txt
+```
+
+---
+
+# Requirements
+
+- Python 3.10+
+- pip
+- Internet connection
+
+Optional:
+
+- uv
+- just command runner
+
+---
+
+# License
+
+Licensed under **AGPL v3.0**
+
+---
+
+# Author
+
+Built for cybersecurity learning and professional DNS reconnaissance workflows.
