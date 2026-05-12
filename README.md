@@ -220,3 +220,5 @@ Licensed under **AGPL v3.0**
 # Author
 
 Jagadeesh Pagoti
+Cybersecurity Enthusiast | Security Researcher | Offensive Security Learner
+Building cybersecurity tools, network intelligence utilities, and security-focused automation projects.
