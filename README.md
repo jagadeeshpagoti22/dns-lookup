@@ -48,30 +48,6 @@ It provides fast, structured, and visually clean DNS query results directly in t
 
 # Installation
 
-## Method 1 — Install from PyPI (Recommended)
-
-Install directly using pip:
-
-```bash
-pip install dnslookup-cli
-```
-
-Or using uv:
-
-```bash
-uv tool install dnslookup-cli
-```
-
-Verify installation:
-
-```bash
-dnslookup --help
-```
-
----
-
-## Method 2 — Install from Source Code
-
 Clone repository:
 
 ```bash
