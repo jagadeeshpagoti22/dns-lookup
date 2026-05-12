@@ -63,7 +63,7 @@ git clone https://github.com/yourusername/dns-lookup-professional-ui.git
 Move into project directory:
 
 ```bash
-cd dns-lookup-professional-ui
+cd dns-lookup
 ```
 
 Create virtual environment:
