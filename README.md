@@ -79,13 +79,13 @@ venv\Scripts\activate
 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install .
 ```
 
 Or:
 
 ```bash
-pip install .
+pip install -r requirements.txt
 ```
 
 ---
